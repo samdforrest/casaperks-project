@@ -1,0 +1,98 @@
+[
+  {
+    "id": "gc_001",
+    "name": "$5 Gift Card",
+    "brand": "Starbucks",
+    "pointsCost": 500,
+    "category": "Food & Drink",
+    "quantity": 10
+  },
+  {
+    "id": "gc_002",
+    "name": "$10 Gift Card",
+    "brand": "Starbucks",
+    "pointsCost": 1000,
+    "category": "Food & Drink",
+    "quantity": 8
+  },
+  {
+    "id": "gc_003",
+    "name": "$10 Gift Card",
+    "brand": "Amazon",
+    "pointsCost": 1000,
+    "category": "Shopping",
+    "quantity": 15
+  },
+  {
+    "id": "gc_004",
+    "name": "$25 Gift Card",
+    "brand": "Amazon",
+    "pointsCost": 2500,
+    "category": "Shopping",
+    "quantity": 5
+  },
+  {
+    "id": "gc_005",
+    "name": "$50 Gift Card",
+    "brand": "Amazon",
+    "pointsCost": 5000,
+    "category": "Shopping",
+    "quantity": 3
+  },
+  {
+    "id": "gc_006",
+    "name": "$10 Gift Card",
+    "brand": "Target",
+    "pointsCost": 1000,
+    "category": "Shopping",
+    "quantity": 12
+  },
+  {
+    "id": "gc_007",
+    "name": "$25 Gift Card",
+    "brand": "Target",
+    "pointsCost": 2500,
+    "category": "Shopping",
+    "quantity": 6
+  },
+  {
+    "id": "gc_008",
+    "name": "$25 Gift Card",
+    "brand": "Visa",
+    "pointsCost": 2500,
+    "category": "Universal",
+    "quantity": 4
+  },
+  {
+    "id": "gc_009",
+    "name": "$50 Gift Card",
+    "brand": "Visa",
+    "pointsCost": 5000,
+    "category": "Universal",
+    "quantity": 2
+  },
+  {
+    "id": "gc_010",
+    "name": "$15 Gift Card",
+    "brand": "Netflix",
+    "pointsCost": 1500,
+    "category": "Entertainment",
+    "quantity": 7
+  },
+  {
+    "id": "gc_011",
+    "name": "$25 Gift Card",
+    "brand": "DoorDash",
+    "pointsCost": 2500,
+    "category": "Food & Drink",
+    "quantity": 5
+  },
+  {
+    "id": "gc_012",
+    "name": "$10 Gift Card",
+    "brand": "Uber Eats",
+    "pointsCost": 1000,
+    "category": "Food & Drink",
+    "quantity": 9
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "txn_001",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 500,
+    "description": "Welcome bonus",
+    "createdAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "txn_002",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 200,
+    "description": "On-time rent payment - January",
+    "createdAt": "2025-02-01T09:00:00Z"
+  },
+  {
+    "id": "txn_003",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 300,
+    "description": "Community event participation",
+    "createdAt": "2025-02-14T17:00:00Z"
+  },
+  {
+    "id": "txn_004",
+    "residentId": "resident_001",
+    "type": "redeem",
+    "points": -500,
+    "description": "Redeemed: Starbucks $5 Gift Card",
+    "createdAt": "2025-02-20T11:30:00Z"
+  },
+  {
+    "id": "txn_005",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 200,
+    "description": "On-time rent payment - February",
+    "createdAt": "2025-03-01T09:00:00Z"
+  },
+  {
+    "id": "txn_006",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 150,
+    "description": "Referral bonus",
+    "createdAt": "2025-03-05T14:00:00Z"
+  },
+  {
+    "id": "txn_007",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 200,
+    "description": "On-time rent payment - March",
+    "createdAt": "2025-04-01T09:00:00Z"
+  },
+  {
+    "id": "txn_008",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 500,
+    "description": "Lease renewal bonus",
+    "createdAt": "2025-04-15T16:00:00Z"
+  },
+  {
+    "id": "txn_009",
+    "residentId": "resident_001",
+    "type": "redeem",
+    "points": -1000,
+    "description": "Redeemed: Amazon $10 Gift Card",
+    "createdAt": "2025-04-20T13:00:00Z"
+  },
+  {
+    "id": "txn_010",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 300,
+    "description": "Community event participation",
+    "createdAt": "2025-05-05T17:00:00Z"
+  },
+  {
+    "id": "txn_011",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 200,
+    "description": "On-time rent payment - April",
+    "createdAt": "2025-05-01T09:00:00Z"
+  },
+  {
+    "id": "txn_012",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 200,
+    "description": "On-time rent payment - May",
+    "createdAt": "2025-06-01T09:00:00Z"
+  },
+  {
+    "id": "txn_013",
+    "residentId": "resident_001",
+    "type": "earn",
+    "points": 500,
+    "description": "Survey completion bonus",
+    "createdAt": "2025-06-10T11:00:00Z"
+  }
+]
