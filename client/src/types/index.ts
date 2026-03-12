@@ -26,6 +26,7 @@ export interface GiftCardResponse {
   pointsCost: number;
   category: string;
   eligible: boolean;
+  ineligibleReason: 'out_of_stock' | 'insufficient_points' | null;
 }
 
 export interface RedeemResponse {

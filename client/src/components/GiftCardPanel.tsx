@@ -94,7 +94,13 @@ export default function GiftCardPanel({ giftCards, status, onRetry, onRedeem, is
                   cursor: card.eligible && !isRedeeming ? 'pointer' : 'not-allowed',
                 }}
               >
-                {isThisCardRedeeming ? 'Redeeming...' : card.eligible ? 'Redeem' : 'Not Eligible'}
+                {isThisCardRedeeming
+                  ? 'Redeeming...'
+                  : card.eligible
+                    ? 'Redeem'
+                    : card.ineligibleReason === 'out_of_stock'
+                      ? 'Out of Stock'
+                      : 'Insufficient Points'}
               </button>
             </div>
           );

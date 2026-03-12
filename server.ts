@@ -149,7 +149,12 @@ app.get('/gift-cards/eligible/:id', authMiddleware, (req: AuthRequest, res: Resp
     brand: card.brand,
     pointsCost: card.pointsCost,
     category: card.category,
-    eligible: card.pointsCost <= balance.points && card.quantity > 0
+    eligible: card.pointsCost <= balance.points && card.quantity > 0,
+    ineligibleReason: card.quantity <= 0
+      ? 'out_of_stock'
+      : card.pointsCost > balance.points
+        ? 'insufficient_points'
+        : null
   }));
   return res.json(result);
 });
