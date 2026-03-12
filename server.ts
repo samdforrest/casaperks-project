@@ -13,6 +13,12 @@ const JWT_SECRET = 'casaperks-secret-dev';
 app.use(cors());
 app.use(express.json());
 
+// ── REQUEST LOGGING ───────────────────────────────────────────────────────────
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 // ── DATA LOADING ──────────────────────────────────────────────────────────────
 // Load JSON files into memory at startup. Mutations update these arrays directly.
 // No file re-reads after startup — all state lives in memory.

@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useAuth } from '../context/AuthContext';
 import {
   Resident,
@@ -135,12 +135,15 @@ export function useApi() {
     [fetchWithAuth]
   );
 
-  return {
-    login,
-    getResident,
-    getBalance,
-    getTransactions,
-    getGiftCards,
-    redeemGiftCard,
-  };
+  return useMemo(
+    () => ({
+      login,
+      getResident,
+      getBalance,
+      getTransactions,
+      getGiftCards,
+      redeemGiftCard,
+    }),
+    [login, getResident, getBalance, getTransactions, getGiftCards, redeemGiftCard]
+  );
 }
