@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useApi } from '../api/client';
-import { Resident, Balance, Transaction, GiftCardResponse, FetchStatus } from '../types';
+import { Resident, Balance, Transaction, GiftCardResponse, FetchStatus, RedeemResponse } from '../types';
 import ResidentPanel from './ResidentPanel';
 import PointsPanel from './PointsPanel';
 import GiftCardPanel from './GiftCardPanel';
 import TransactionPanel from './TransactionPanel';
+import RedemptionPopup from './RedemptionPopup';
 
 export default function Dashboard() {
   const { residentId, logout } = useAuth();
@@ -25,6 +26,7 @@ export default function Dashboard() {
 
   const [staleWarning, setStaleWarning] = useState(false);
   const [isRedeeming, setIsRedeeming] = useState(false);
+  const [redemptionResult, setRedemptionResult] = useState<{ code: string; giftCardName: string } | null>(null);
 
   const fetchResident = useCallback(async () => {
     if (!residentId) return;
@@ -86,7 +88,19 @@ export default function Dashboard() {
     setStaleWarning(false);
 
     try {
-      await api.redeemGiftCard(giftCardId);
+      const response = await api.redeemGiftCard(giftCardId);
+
+      // Find the gift card name for the popup
+      const redeemedCard = giftCards.find((c) => c.id === giftCardId);
+      const giftCardName = redeemedCard ? `${redeemedCard.brand} ${redeemedCard.name}` : 'Gift Card';
+
+      // Show the popup with the redemption code
+      if (response.transaction.redemptionCode) {
+        setRedemptionResult({
+          code: response.transaction.redemptionCode,
+          giftCardName,
+        });
+      }
 
       const results = await Promise.allSettled([
         fetchBalance(),
@@ -157,6 +171,14 @@ export default function Dashboard() {
           onRetry={fetchTransactions}
         />
       </div>
+
+      {redemptionResult && (
+        <RedemptionPopup
+          code={redemptionResult.code}
+          giftCardName={redemptionResult.giftCardName}
+          onClose={() => setRedemptionResult(null)}
+        />
+      )}
     </div>
   );
 }

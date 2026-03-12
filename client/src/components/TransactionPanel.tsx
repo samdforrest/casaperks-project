@@ -44,6 +44,7 @@ export default function TransactionPanel({ transactions, status, onRetry }: Prop
             <th style={{ textAlign: 'left', padding: 8 }}>Date</th>
             <th style={{ textAlign: 'left', padding: 8 }}>Type</th>
             <th style={{ textAlign: 'left', padding: 8 }}>Description</th>
+            <th style={{ textAlign: 'left', padding: 8 }}>Code</th>
             <th style={{ textAlign: 'right', padding: 8 }}>Points</th>
           </tr>
         </thead>
@@ -55,6 +56,9 @@ export default function TransactionPanel({ transactions, status, onRetry }: Prop
               </td>
               <td style={{ padding: 8 }}>{txn.type || '—'}</td>
               <td style={{ padding: 8 }}>{txn.description || '—'}</td>
+              <td style={{ padding: 8, fontFamily: 'monospace', fontSize: 12 }}>
+                {txn.redemptionCode || '—'}
+              </td>
               <td style={{ padding: 8, textAlign: 'right', color: txn.points > 0 ? 'green' : 'red' }}>
                 {txn.points !== undefined ? (txn.points > 0 ? `+${txn.points}` : txn.points) : '—'}
               </td>

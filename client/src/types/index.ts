@@ -16,6 +16,7 @@ export interface Transaction {
   points: number;
   description: string;
   createdAt: string;
+  redemptionCode?: string;  // only present for 'redeem' type
 }
 
 export interface GiftCardResponse {

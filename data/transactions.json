@@ -29,7 +29,8 @@
     "type": "redeem",
     "points": -500,
     "description": "Redeemed: Starbucks $5 Gift Card",
-    "createdAt": "2025-02-20T11:30:00Z"
+    "createdAt": "2025-02-20T11:30:00Z",
+    "redemptionCode": "SBX4K7M2N9PQ"
   },
   {
     "id": "txn_005",
@@ -69,7 +70,8 @@
     "type": "redeem",
     "points": -1000,
     "description": "Redeemed: Amazon $10 Gift Card",
-    "createdAt": "2025-04-20T13:00:00Z"
+    "createdAt": "2025-04-20T13:00:00Z",
+    "redemptionCode": "AMZ8R3L5W1XY"
   },
   {
     "id": "txn_010",

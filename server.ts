@@ -41,6 +41,16 @@ interface Transaction {
   points: number;
   description: string;
   createdAt: string;
+  redemptionCode?: string;
+}
+
+function generateRedemptionCode(): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let code = '';
+  for (let i = 0; i < 12; i++) {
+    code += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return code;
 }
 
 interface GiftCard {
@@ -186,13 +196,15 @@ app.post('/redeem', authMiddleware, redeemLimiter, (req: AuthRequest, res: Respo
   card.quantity -= 1;
 
   // 7. Mutation 3: append transaction
+  const redemptionCode = generateRedemptionCode();
   const newTransaction: Transaction = {
     id: `txn_${Date.now()}`,
     residentId,
     type: 'redeem',
     points: -card.pointsCost,
     description: `Redeemed: ${card.brand} ${card.name}`,
-    createdAt: new Date().toISOString()
+    createdAt: new Date().toISOString(),
+    redemptionCode
   };
   transactions.push(newTransaction);
 
