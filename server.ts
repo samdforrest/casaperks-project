@@ -62,10 +62,11 @@ interface GiftCard {
   quantity: number;
 }
 
-const residents: Resident[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/residents.json'), 'utf-8'));
-const balances: Balance[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/balances.json'), 'utf-8'));
-const transactions: Transaction[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/transactions.json'), 'utf-8'));
-const giftcards: GiftCard[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/giftcards.json'), 'utf-8'));
+const dataDir = path.join(process.cwd(), 'data');
+const residents: Resident[] = JSON.parse(fs.readFileSync(path.join(dataDir, 'residents.json'), 'utf-8'));
+const balances: Balance[] = JSON.parse(fs.readFileSync(path.join(dataDir, 'balances.json'), 'utf-8'));
+const transactions: Transaction[] = JSON.parse(fs.readFileSync(path.join(dataDir, 'transactions.json'), 'utf-8'));
+const giftcards: GiftCard[] = JSON.parse(fs.readFileSync(path.join(dataDir, 'giftcards.json'), 'utf-8'));
 
 // ── JWT MIDDLEWARE ────────────────────────────────────────────────────────────
 

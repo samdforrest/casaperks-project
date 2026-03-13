@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useApi } from '../api/client';
-import { Resident, Balance, Transaction, GiftCardResponse, FetchStatus, RedeemResponse } from '../types';
+import { Resident, Balance, Transaction, GiftCardResponse, FetchStatus } from '../types';
 import ResidentPanel from './ResidentPanel';
 import PointsPanel from './PointsPanel';
 import GiftCardPanel from './GiftCardPanel';
